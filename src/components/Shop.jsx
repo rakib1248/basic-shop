@@ -5,17 +5,17 @@ import ProductList from "./Products/ProductList";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CgMenuGridR } from "react-icons/cg";
 import { useSelector } from "react-redux";
-import Loader from "./Loader";
+
 
 const Shop = () => {
   const [productList, setProductList] = useState(true);
   const [search, setSearch] = useState("");
 
-  const { products, isLoder } = useSelector((state) => state.products);
+  const { products } = useSelector((state) => state.products);
 
   return (
     <>
-      {isLoder ? <Loader /> : ""}
+   
     
 
       {/*  */}
