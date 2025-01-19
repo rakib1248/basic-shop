@@ -8,11 +8,11 @@ const ProductList = ({ product }) => {
         <div className="w-2/4">
           <div className="relative">
             <img
-              className="rounded-t-lg object-cover h-full w-[290px]  hover:scale-110 hover:overflow-hidden transition-all cursor-pointer"
+              className="rounded-t-lg object-cover h-52 w-[290px]  hover:scale-110 hover:overflow-hidden transition-all cursor-pointer"
               src={product.image}
               alt={product.name}
             />
-            <span className="absolute top-3 md:top-12 left-3 bg-blue-500 text-white px-3 rounded">
+            <span className="absolute top-3  left-3 bg-blue-500 text-white px-3 rounded">
               {product.for}
             </span>
           </div>
