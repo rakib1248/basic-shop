@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { allProducts, createProduct, DeleteProduct } from "./ProductApiSlice";
+import { alertToster } from "../../../utils/helper";
 
 const ProductSlice = createSlice({
   name: "product",
@@ -30,6 +31,7 @@ const ProductSlice = createSlice({
       })
       .addCase(createProduct.fulfilled, (state, action) => {
         state.products.push(action.payload);
+        alertToster("product Create Successfully")
         state.isLoader = false;
       })
       .addCase(createProduct.pending, (state) => {
@@ -42,6 +44,7 @@ const ProductSlice = createSlice({
         state.products = state.products.filter(
           (item) => item.id !== action.payload
         );
+        alertToster("product Dleted Successfully");
         state.isLoader = false;
       })
       .addCase(DeleteProduct.pending, (state) => {
