@@ -9,7 +9,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="sticky top-0 bg-white z-50 shadow-md">
+      <div className="sticky top-0 bg-white z-30 shadow-md">
         <div className="w-[98%] md:w-[85%] mx-auto ">
           <div className="flex justify-between items-center">
             {/* Left Section */}

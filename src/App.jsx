@@ -21,7 +21,6 @@ function App() {
 
   const dispatch = useDispatch();
   const loder = useSelector((state) => state.products.isLoader);
-  
 
   useEffect(() => {
     dispatch(allProducts());
@@ -29,8 +28,8 @@ function App() {
   return (
     <>
       <Router>
-        {loder?<Loader/>:""}
-       
+        {loder ? <Loader /> : ""}
+
         <Header />
         <AppRouter />
         <Footer />
